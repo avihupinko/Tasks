@@ -1,0 +1,46 @@
+<div class="container" *ngIf="!!form">
+    <div class="row mt-2">
+        <div class="card mb-4">
+            <div class="card-header">
+               <h5> New Task </h5>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="submit()">
+                    <div class="row">
+                        <label for="userId">User</label>
+                        <select class="browser-default custom-select" id="userId" formControlName="userId"
+                            placeholder="User"
+                            [ngClass]="{'is-invalid': !form.controls['userId'].valid && form.controls['userId'].touched}"
+                            class="form-control">
+                            <option *ngFor="let user of (users$ | async)" [ngValue]="user.id">{{ user.name }}</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <label for="subject">Subject</label>
+                        <input type="text"
+                            [ngClass]="{'is-invalid': !form.controls['subject'].valid && form.controls['subject'].touched}"
+                            class="form-control" id="subject" formControlName="subject" placeholder="Subject">
+                    </div>
+                    <div class="row">
+                        <label for="targetDate">Target Date</label>
+                        <input type="date" min="{{date | date:'yyyy-MM-dd'}}"
+                            [ngClass]="{'is-invalid': !form.controls['targetDate'].valid && form.controls['targetDate'].touched}"
+                            class="form-control" id="targetDate" formControlName="targetDate" placeholder="Target Date">
+                    </div>
+                    <div class="row">
+                        <div class="form-check form-switch">
+                            <label class="form-check-label" id="isCompleted" for="isCompleted">Completed </label>
+                            <input mdbCheckbox class="form-control form-check-input" type="checkbox" id="isCompleted" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-block btn-lg  btn-success" [disabled]="!form.valid">
+                                {{ 'Save' }}</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
