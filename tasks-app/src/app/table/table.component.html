@@ -13,7 +13,7 @@
         </div>
         <div class="col-6 tasks">
             <div class="row" *ngFor="let record of data$ | async">
-                <task-card [task]="record"></task-card>
+                <task-card [task]="record" [reload$]="reload$"></task-card>
             </div>
         </div>
 

@@ -63,5 +63,23 @@ namespace users_backend.Controllers
                 return BadRequest(exp.Message);
             }
         }
+
+        /// <summary>
+        /// Update Task Status
+        /// </summary>
+        /// <returns></returns>
+        [HttpPut("~/api/Tasks/ChangeStatus")]
+        public async Task<IActionResult> ChangeStatus(ChangeTaskStatusLogicModel model)
+        {
+            try
+            {
+                await _service.ChangeStatus(model);
+                return Ok();
+            }
+            catch (ValidationException exp)
+            {
+                return BadRequest(exp.Message);
+            }
+        }
     }
 }

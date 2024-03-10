@@ -29,6 +29,15 @@ namespace Tasks.Services
                 }).ToListAsync();
         }
 
+        public async Task ChangeStatus(ChangeTaskStatusLogicModel model)
+        {
+            var task = await this._dbContext.UserTasks.FirstOrDefaultAsync(x=> x.Id == model.Id);
+            if (task == null)
+                throw new ValidationException("Task not found");
+            task.IsCompleted = model.IsCompleted;
+            await this._dbContext.SaveChangesAsync();
+        }
+
         public async Task<TaskLogicModel> Create(TaskLogicModel model)
         {
             var user = await this._dbContext.Users.FirstOrDefaultAsync(x => x.Id == model.UserId);

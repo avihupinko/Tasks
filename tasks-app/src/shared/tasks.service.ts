@@ -28,4 +28,8 @@ export class TasksService {
         return this.httpClient.post<Task>(`${this.serverUrl}/Tasks`, model);
     }
 
+    public changeStatus(model: Task) {
+        return this.httpClient.put<Task>(`${this.serverUrl}/Tasks/changeStatus`, model);
+    }
+
 }

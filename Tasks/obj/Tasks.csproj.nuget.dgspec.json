@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micha\\Documents\\Tasks\\Tasks\\Tasks.csproj": {}
+    "C:\\projects\\Tasks\\Tasks\\Tasks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micha\\Documents\\Tasks\\Tasks\\Tasks.csproj": {
+    "C:\\projects\\Tasks\\Tasks\\Tasks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micha\\Documents\\Tasks\\Tasks\\Tasks.csproj",
+        "projectUniqueName": "C:\\projects\\Tasks\\Tasks\\Tasks.csproj",
         "projectName": "Tasks",
-        "projectPath": "C:\\Users\\micha\\Documents\\Tasks\\Tasks\\Tasks.csproj",
-        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micha\\Documents\\Tasks\\Tasks\\obj\\",
+        "projectPath": "C:\\projects\\Tasks\\Tasks\\Tasks.csproj",
+        "packagesPath": "C:\\Users\\avihu\\.nuget\\packages\\",
+        "outputPath": "C:\\projects\\Tasks\\Tasks\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\avihu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

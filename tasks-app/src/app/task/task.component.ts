@@ -40,7 +40,9 @@ export class TaskComponent {
     });
   }
 
-
+  public switchChange(evt: any){
+    this.form?.controls['isCompleted'].setValue(  evt.target.checked);
+  }
 
   submit() {
     if (this.form?.valid) {

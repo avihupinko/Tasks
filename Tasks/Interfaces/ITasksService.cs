@@ -8,5 +8,7 @@ namespace Tasks.Interfaces
         Task<List<TaskLogicModel>> Get();
         Task<TaskLogicModel> Create(TaskLogicModel model);
         Task<List<TaskLogicModel>> OverDueTasks(OverDueTasksLogicModel model);
+
+        Task ChangeStatus(ChangeTaskStatusLogicModel model);
     }
 }
